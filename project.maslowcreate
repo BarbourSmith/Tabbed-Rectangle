@@ -4,9 +4,80 @@
     "x": 0,
     "y": 0,
     "uniqueID": 188503,
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "X",
+            "ioValue": 10
+        },
+        {
+            "name": "Y",
+            "ioValue": 10
+        },
+        {
+            "name": "Material Thickness",
+            "ioValue": 10
+        }
+    ],
     "topLevel": true,
     "allAtoms": [
+        {
+            "atomType": "Input",
+            "name": "X",
+            "x": 0.013333333333333334,
+            "y": 0.3320610687022901,
+            "uniqueID": 880055,
+            "ioValues": []
+        },
+        {
+            "atomType": "Input",
+            "name": "Y",
+            "x": 0.013333333333333334,
+            "y": 0.5229007633587786,
+            "uniqueID": 586553,
+            "ioValues": []
+        },
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.18666666666666668,
+            "y": 0.5763358778625954,
+            "uniqueID": 415868,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 10
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 10
+                }
+            ]
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.43377777777777776,
+            "y": 0.46564885496183206,
+            "uniqueID": 749217,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": ""
+                },
+                {
+                    "name": "height",
+                    "ioValue": 10
+                }
+            ]
+        },
+        {
+            "atomType": "Input",
+            "name": "Material Thickness",
+            "x": 0.013333333333333334,
+            "y": 0.7442748091603054,
+            "uniqueID": 303202,
+            "ioValues": []
+        },
         {
             "atomType": "Output",
             "name": "Output",
