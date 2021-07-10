@@ -7,7 +7,7 @@
     "ioValues": [
         {
             "name": "X",
-            "ioValue": 10
+            "ioValue": 30
         },
         {
             "name": "Y",
@@ -15,11 +15,28 @@
         },
         {
             "name": "Material Thickness",
-            "ioValue": 10
+            "ioValue": 0.75
         }
     ],
     "topLevel": true,
     "allAtoms": [
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.1608888888888889,
+            "y": 0.27099236641221375,
+            "uniqueID": 415868,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 30
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 10
+                }
+            ]
+        },
         {
             "atomType": "Input",
             "name": "X",
@@ -37,36 +54,33 @@
             "ioValues": []
         },
         {
-            "atomType": "Rectangle",
-            "name": "Rectangle",
-            "x": 0.18666666666666668,
-            "y": 0.5763358778625954,
-            "uniqueID": 415868,
+            "atomType": "Equation",
+            "name": "Y/5",
+            "x": 0.20977777777777779,
+            "y": 0.5038167938931297,
+            "uniqueID": 266915,
             "ioValues": [
                 {
-                    "name": "x length",
-                    "ioValue": 10
-                },
-                {
-                    "name": "y length",
+                    "name": "Y",
                     "ioValue": 10
                 }
-            ]
+            ],
+            "currentEquation": "Y/5"
         },
         {
             "atomType": "Extrude",
             "name": "Extrude",
-            "x": 0.43377777777777776,
-            "y": 0.46564885496183206,
+            "x": 0.41955555555555557,
+            "y": 0.4236641221374046,
             "uniqueID": 749217,
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": ""
+                    "ioValue": "atoms/188503/415868Rectangle"
                 },
                 {
                     "name": "height",
-                    "ioValue": 10
+                    "ioValue": 0.75
                 }
             ]
         },
@@ -74,9 +88,74 @@
             "atomType": "Input",
             "name": "Material Thickness",
             "x": 0.013333333333333334,
-            "y": 0.7442748091603054,
+            "y": 0.7366412213740459,
             "uniqueID": 303202,
             "ioValues": []
+        },
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.41688888888888886,
+            "y": 0.6946564885496184,
+            "uniqueID": 794371,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 31.5
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 2
+                }
+            ]
+        },
+        {
+            "atomType": "Equation",
+            "name": "x+2*T",
+            "x": 0.21155555555555555,
+            "y": 0.7862595419847328,
+            "uniqueID": 622890,
+            "ioValues": [
+                {
+                    "name": "x",
+                    "ioValue": 30
+                },
+                {
+                    "name": "T",
+                    "ioValue": 0.75
+                }
+            ],
+            "currentEquation": "x+2*T"
+        },
+        {
+            "atomType": "Group",
+            "name": "Group",
+            "x": 0.7137777777777777,
+            "y": 0.4236641221374046,
+            "uniqueID": 625587,
+            "ioValues": [
+                {
+                    "name": "3D shape 1",
+                    "ioValue": 10
+                }
+            ]
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.5173333333333333,
+            "y": 0.7404580152671755,
+            "uniqueID": 400119,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "atoms/188503/794371Rectangle"
+                },
+                {
+                    "name": "height",
+                    "ioValue": 0.75
+                }
+            ]
         },
         {
             "atomType": "Output",
@@ -84,10 +163,107 @@
             "x": 0.9822222222222223,
             "y": 0.5,
             "uniqueID": 535344,
-            "ioValues": []
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "atoms/188503/625587Group"
+                }
+            ]
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 415868,
+            "ap2ID": 749217
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "x length",
+            "ap2Primary": false,
+            "ap1ID": 880055,
+            "ap2ID": 415868
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "x",
+            "ap2Primary": false,
+            "ap1ID": 880055,
+            "ap2ID": 622890
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "y length",
+            "ap2Primary": false,
+            "ap1ID": 586553,
+            "ap2ID": 415868
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Y",
+            "ap2Primary": false,
+            "ap1ID": 586553,
+            "ap2ID": 266915
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "y length",
+            "ap2Primary": false,
+            "ap1ID": 266915,
+            "ap2ID": 794371
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "3D shape 1",
+            "ap2Primary": false,
+            "ap1ID": 749217,
+            "ap2ID": 625587
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "height",
+            "ap2Primary": false,
+            "ap1ID": 303202,
+            "ap2ID": 749217
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "T",
+            "ap2Primary": false,
+            "ap1ID": 303202,
+            "ap2ID": 622890
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "height",
+            "ap2Primary": false,
+            "ap1ID": 303202,
+            "ap2ID": 400119
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 794371,
+            "ap2ID": 400119
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "x length",
+            "ap2Primary": false,
+            "ap1ID": 622890,
+            "ap2ID": 794371
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 625587,
+            "ap2ID": 535344
+        }
+    ],
     "fileTypeVersion": 1,
     "simplify": false,
     "filetypeVersion": 1,
